@@ -30,7 +30,7 @@ module Mustachio
       else
         #@stache_num = 1
         #@site = Addressable::URI.parse(request.url).site
-	send_file "public/index.html"
+	erb "index.erb"
       end
     end
       
