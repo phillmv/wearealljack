@@ -28,8 +28,7 @@ a {
 	font-weight: normal;
 }
 #quote {
-	margin-bottom: 2em;
-	margin-top: 0em;
+	margin-bottom: 2.2em;
 }
 
 .instructions {
@@ -56,7 +55,7 @@ form input[type="submit"] {
 }
 
 h1 {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 
 #main {
