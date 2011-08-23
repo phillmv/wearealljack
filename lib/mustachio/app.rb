@@ -21,30 +21,18 @@ module Mustachio
     end
     
     
-    get %r{^/(\d+|rand)?$} do |stache_num|
+    get "/" do 
       src = params[:src]
       if src
         # use the specified stache, otherwise fall back to random
-        image = Magickly.process_src params[:src], :mustachify => (stache_num || true)
+        image = Magickly.process_src params[:src], :mustachify => true
         image.to_response(env)
       else
-        @stache_num = stache_num
+        @stache_num = 1
         @site = Addressable::URI.parse(request.url).site
-        haml :index
+        erb :index
       end
     end
-    
-    get '/gallery' do
-      haml :gallery
-    end
-    
-    get '/test' do
-      haml :test
-    end
-    
-    get '/face_api_dev_challenge' do
-      haml :face_api_dev_challenge
-    end
-    
+      
   end
 end

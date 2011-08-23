@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>We are all Jack</title>
+    <link rel="stylesheet" href="jack.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.formHints.js"></script>
+
+    <body>
+
+    <div id="container">
+
+      <h1>We are all Jack Layton</h1>
+      <p id="quote"><a href="http://www.cbc.ca/news/politics/story/2011/08/22/pol-layton-last-letter.html">"My friends, love is better than anger. Hope is better than fear. Optimism is better than despair. So let us be loving, hopeful and optimistic. <strong>And we'll change the world</strong>."</a></p>
+
+
+      <div id="jack">
+	<img src="jack.png"/>
+      </div>
+
+      <div id="main">
+	
+	<p class="instructions">Add Jack's moustache to any photo of yourself.</p>
+	
+	<form action="" method="GET">
+		<input title="Paste image URL here" name="src" type="text"/>
+		<input class="myButton" type="submit"/ value="Go">
+	</form>
+	
+	<p>(Don't have an image of yourself online? <a href="http://imgur.com">Upload one here</a> or find one on Facebook, right click on the 'Download' link (underneath the photo on the left side) and choose "copy image location.")</p>
+
+	<div id="young_jack">
+	  <img src="young_jack.jpg"/><img style="margin-left: 20px" src="stached_young_jack.jpg"/>
+	</div>
+	
+      </div>
+
+      <div class="clear">&nbsp;</div>
+    </div>
+
+    <div id="footer">
+      <p>Code forked from <a href="https://github.com/afeld/mustachio">mustachio</a> by <a href="http://okayfail.com/">Phillip Mendonça-Vieira</a> and page design by <a href="http://hyfen.net">Andrew Louis</a>. Moustache cutout provided by <a href="http://yayinternets.com/">Shawn Allison</a>.</p>
+      <p>No images are stored, so please don't link directly. We reserve the right to makes this into a tumblr.</p> 
+
+      <p>Totally unaffiliated with the NDP, the Government of Canada or the City of Toronto.</p>
+    </div>
+
+  <script type="text/javascript">
+	$(document).ready(function() {
+		$('#main').formHints();
+	})
+      </script>
+
+  <script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-3507107-4']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	 })();
+
+</script>
+      
+
+</body>
+</html>

@@ -2,6 +2,13 @@ require 'magickly'
 require 'image_size'
 require File.join(File.dirname(__FILE__), 'mustachio', 'shortcuts')
 
+
+# There is some magic to loading these properly that I can't be arsed
+# to look up at the moment.
+face_api = YAML::load(open(File.join(File.dirname(__FILE__), "..", "config", "keys.yml")).read)
+ENV['MUSTACHIO_FACE_API_KEY'] = face_api['MUSTACHIO_FACE_API_KEY']
+ENV['MUSTACHIO_FACE_API_SECRET'] = face_api['MUSTACHIO_FACE_API_SECRET'] 
+
 module Mustachio
   FACE_POS_ATTRS = ['center', 'eye_left', 'eye_right', 'mouth_left', 'mouth_center', 'mouth_right', 'nose']
   FACE_SPAN_SCALE = 2.0

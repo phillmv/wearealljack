@@ -48,7 +48,9 @@ Magickly.dragonfly.configure do |c|
         ( face['nose']['y'] - face['mouth_center']['y'] ).to_f**2
       )
       mouth_intersect = mustache['height'] - mustache['mouth_overlap']
-      scale = desired_height / mouth_intersect
+
+      # jack's moustache is less outlandish than the sample ones
+      scale = (desired_height / mouth_intersect)/2
       
       srt_params = [
         [ mustache['width'] / 2.0, mouth_intersect - mustache['vert_offset'] ].map{|e| e.to_i }.join(','), # bottom-center of stache
