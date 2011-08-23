@@ -28,9 +28,9 @@ module Mustachio
         image = Magickly.process_src params[:src], :mustachify => true
         image.to_response(env)
       else
-        @stache_num = 1
-        @site = Addressable::URI.parse(request.url).site
-        erb :index
+        #@stache_num = 1
+        #@site = Addressable::URI.parse(request.url).site
+	send_file "public/index.html"
       end
     end
       
