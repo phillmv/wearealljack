@@ -29,6 +29,7 @@ a {
 }
 #quote {
 	margin-bottom: 2em;
+	margin-top: 0em;
 }
 
 .instructions {
@@ -52,6 +53,10 @@ form input[type="text"] {
 form input[type="submit"] {
 	width: 10%;
 	float: right;
+}
+
+h1 {
+	margin-bottom: 1.5em;
 }
 
 #main {
